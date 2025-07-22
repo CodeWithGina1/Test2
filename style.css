@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #444;
+  background-image: url("roasted.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Header with animated background image */
+header {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Background image inside header */
+.bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('restaurant-banner.jpg') no-repeat center center/cover;
+  opacity: 5;
+  z-index: 1;
+}
+
+/* Animate background swipe up */
+@keyframes swipeUpBg {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+}
+
+.swipe-up-bg {
+  animation: swipeUpBg 1.5s ease-out forwards;
+}
+
+/* Overlay for text content */
+.overlay {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  padding: 120px 20px;
+}
+
+/* Text styling */
+header h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.3em;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: rgb(109, 17, 33);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+/* Swipe-up animation for text elements */
+@keyframes swipeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.swipe-up {
+  opacity: 0;
+  animation: swipeUp 1s ease-out forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 0.8s;
+}
+
+.delay-3 {
+  animation-delay: 1.1s;
+}
+
+/* Section styles */
+section {
+  padding: 20px 20px;
+  text-align: center;
+}
+
+section h2 {
+  color: #A52A2A;
+}
+
+#info {
+  padding: 40px;
+  margin: 30px auto;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+footer {
+  background: #3b3434;
+  color: #eee;
+  text-align: center;
+  padding: 20px;
+  bottom: 0;
+  width: 100%;
+}
